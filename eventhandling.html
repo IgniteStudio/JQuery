@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Crash Course | Events</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <style>
+        body {
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+        
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        
+        #container {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>JQuery Crash Course</h1>
+    </header>
+    <div id="container">
+        <h3>Mouse Events</h3>
+        <button id="btn1" class="btnClass">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <p class="para1">JQuery is a library built on top of JavaScript. This page demonstrates event handling with JQuery.</p>
+        <!--<h1 id="coords"></h1> -->
+        <hr>
+        <form id="form">
+            <label>Name</label><br>
+            <input type="text" name="name" id="name"><br>
+            <label>Email</label><br>
+            <input type="email" name="email" id="email"><br>
+            <label>Gender</label><br>
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select><br><br>
+            <input type="submit" value="Go!">
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            /*
+            $('#btn1').click(function(){
+                alert('Button Clicked!');
+            });
+
+            Using the on() makes it go faster.
+            $('#btn1').on('click', function(){
+                alert('Butt Clicked!');
+            });
+            
+            $('#btn1').on('click', function(){
+                $('.para1').hide();
+            });
+
+            $('#btn2').on('click', function(){
+                $('.para1').show();
+            });
+                        
+            $('#btn1').on('click', function(){
+                $('.para1').toggle();
+            });
+
+             $('#btn1').dblclick(function(){
+                $('.para1').toggle();
+            });
+
+            // Because hover is a pseudo class it cannot be used with the on() method.
+            $('#btn1').hover(function(){
+                $('.para1').toggle();
+            });
+            // hover uses both mouseenter and mouseleave                                    
+            $('#btn1').on('mouseenter', function(){
+                $('.para1').toggle();
+            });
+            
+            $('#btn1').on('mouseleave', function(){
+                $('.para1').toggle();
+            });
+            
+            $('#btn1').on('mousemove', function(){
+                $('.para1').toggle();
+            });
+            
+            $('#btn1').on('mouseup', function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').on('mousedown', function(){
+                $('.para1').toggle();
+            });
+
+            
+            $('#btn1').on('click', function(e){
+                alert(e.currentTarget.id);
+                alert(e.currentTarget.innerHTML);
+                alert(e.currentTarget.outerHTML);
+                alert(e.currentTarget.className);
+            });
+
+            $('#btn1').on('mousemove', function(e){
+                console.log('Coords: X: ' + e.clientX + ' Y: ' + e.clientY);
+            });
+            
+             $(document).on('mousemove', function(e){
+                console.log('Coords: X: ' + e.clientX + ' Y: ' + e.clientY);
+            });
+
+            $(document).on('mousemove', function(e){
+                $('#coords').html('Co-ords: X: ' + e.clientX + ' Y: ' + e.clientY);
+            });
+  
+            $('input').focus(function(){
+                $(this).css('background', 'coral');
+            });
+
+          
+            $('input').blur(function(){
+                $(this).css('background', 'white');
+            });
+            
+            $('select#gender').change(function(e){
+                alert(e.target.value);
+            });
+
+             $('#form').submit(function(e){
+                e.preventDefault();
+                var name = $('input#name').val();
+                console.log(name);
+            });
+
+            */
+            
+           
+            
+            
+        });
+    </script>
+
+
+</body>
+
+</html>

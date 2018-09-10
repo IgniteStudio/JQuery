@@ -38,6 +38,13 @@
             padding: 40px;
             text-align: center;
         }
+
+        #box2 {
+            background: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
     </style>
 
 </head>
@@ -46,13 +53,31 @@
     <header>
         <h1>JQuery Effects and Animation</h1>
     </header>
+
     <div id="container">
         <button id="btnFOut">Fade Out</button>  
         <button id="btnFIn">Fade In</button>  
         <button id="btnFTog">Fade Toggle</button>  
+
+        <hr>
+
+        <button id="btnSUp">Slide Up</button>  
+        <button id="btnSDown">Slide Down</button>  
+        <button id="btnSTog">Slide Toggle</button>  
+        <button id="btnStop">Stop</button>
     </div>
+
     <hr>
+
     <div id="box"><h1>Hello World</h1></div>
+
+    <hr>
+
+    <button id="moveL">Move Left</button>  
+    <button id="moveR">Move Right</button>  
+    <button id="moveA">Move Around</button>  
+    <hr>
+    <div id="box2"></div>
 
     <script>
         $(document).ready(function() {
@@ -61,23 +86,86 @@
             const btnFIn = $('#btnFIn');
             const btnFTog = $('#btnFTog');
             const box = $('#box');
+            const box2 = $('#box2');
+            const btnSUp = $('#btnSUp');
+            const btnSDown = $('#btnSDown');
+            const btnSTog = $('#btnSTog');
+            const btnStop = $('#btnStop');
+            const moveL = $('#moveL');
+            const moveR = $('#moveR');
+            const moveA = $('#moveA');
 
+            
+            // Fade effect 
             btnFOut.click(function(){
                 box.fadeOut(3000, function(){
                     btnFOut.text('Its Gone!');
                 });
-            })
+            });
             
             btnFIn.click(function(){
                 box.fadeIn(3000, function(){
                     btnFIn.text('Its Back!');
                 });
-            })
+            });
           
             btnFTog.click(function(){
                 box.fadeToggle(1000);
-            })
+            });
+            
+            // Slide effect
+            btnSUp.click(function(){
+                box.slideUp(3000);
+            });
+            
+            btnSDown.click(function(){
+                box.slideDown(3000);
+            });
+          
+            btnSTog.click(function(){
+                box.slideToggle(1000);
+            });
 
+            btnStop.click(function(){
+                box.stop();
+            });
+
+            moveL.click(function(){
+                box2.animate({
+                    left: 0,
+                    height: '100px',
+                    width: '100px',
+                    opacity: '1'
+
+                });
+            });
+
+            moveR.click(function(){
+                box2.animate({
+                    left: 500,
+                    height: '300px',
+                    width: '300px',
+                    opacity: '0.5'
+                });
+            });
+
+            moveA.click(function(){
+                box2.animate({
+                    left: 300,
+                });
+                box2.animate({
+                    top: 300,
+                });
+                box2.animate({
+                    left: 0,
+                    top: 300
+                });
+                box2.animate({
+                    left: 0,
+                    top: 0
+                });
+            });
+            
 
             
         });

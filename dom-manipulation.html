@@ -64,6 +64,7 @@
             const a = $('a');
             const p = $('p');
             const newItem = $('#newItem');
+            const users = $('#users');
 
 
 
@@ -109,7 +110,7 @@
                const code = e.which;
                if(code == 13){
                    e.preventDefault();
-                   ul.append('<li>' + e.target.value + '</li>');
+                   users.append('<li>' + e.target.value + '</li>');
                }
            });
             

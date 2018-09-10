@@ -43,7 +43,7 @@
         <p class="para2">This is another paragraph</p>
         <div id="myDiv"></div>
         <input type="text" id="newItem">
-        <ul>
+        <ul id="list">
             <li>item 1</li>
             <li>item 2</li>
             <li>item 3</li>
@@ -65,7 +65,7 @@
             const p = $('p');
             const newItem = $('#newItem');
             const users = $('#users');
-
+            const myArr = ['Dave', 'Rouni', 'Atef', 'Mona', 'Emma', 'Shawn'];
 
 
             // para1.css('color', 'red'); // single css att
@@ -105,7 +105,7 @@
             
             p.wrap('<h1>');
             p.wrapAll('<h1>');
-            */
+            
            newItem.keyup(function(e){
                const code = e.which;
                if(code == 13){
@@ -113,6 +113,21 @@
                    users.append('<li>' + e.target.value + '</li>');
                }
            });
+         
+           // Arrays with JQuery
+           $.each(myArr, function(i, val){
+               users.append('<li>'+val+'</li>');
+           })
+ 
+         
+
+          const newArr = $('ul#list li').toArray();
+          // console.log(newArr);
+          $.each(newArr, function(i, val){
+               console.log(val.innerHTML);
+           });
+
+             */
             
 
             

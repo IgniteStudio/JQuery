@@ -38,13 +38,82 @@
         <h1>JQuery DOM Manipulation</h1>
     </header>
     <div id="container">
-        
+        <button id="btn1">Button 1</button>
+        <p class="para1">This is a paragraph</p>
+        <p class="para2">This is another paragraph</p>
+        <div id="myDiv"></div>
+        <input type="text" id="newItem">
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+        <a href="https://www.google.ca">Google</a>
+        <ul id="users"></ul>
     </div>
 
     <script>
         $(document).ready(function() {
-               
             
+            const para1 = $('para1');
+            const para2 = $('para2');
+            const myDiv = $('#myDiv');
+            const ul = $('ul');
+            const btn1 = $('#btn1');
+            const a = $('a');
+            const p = $('p');
+            const newItem = $('#newItem');
+
+
+
+            // para1.css('color', 'red'); // single css att
+    /*      para1.css({ // multiple css att's
+                color: 'red',
+                background: '#000'
+            });
+
+            para2.addClass('myClass');
+            para2.removeClass('myClass');
+
+            btn1.on('click', function(){
+                para2.toggleClass('myClass');
+            });
+              
+              
+
+            myDiv.text('Hello World');
+            myDiv.html('<h3>Hello World</h3>');
+            alert(myDiv.text());
+            
+            
+            ul.append('<li>added to end</li>');
+            ul.prepend('<li>added to beginning</li>'); 
+
+            para1.appendTo('.para2');
+            para1.prependTo('.para2');
+            ul.css('list-style-type', 'none');
+            ul.before('<h4>Hi</h4>');
+            ul.after('<h4>Hi</h4>');
+            ul.empty();
+            ul.detach();
+            
+            a.attr('target', '_blank');
+            alert(a.attr('href'));
+            a.removeAttr('target');
+            
+            p.wrap('<h1>');
+            p.wrapAll('<h1>');
+            */
+           newItem.keyup(function(e){
+               const code = e.which;
+               if(code == 13){
+                   e.preventDefault();
+                   ul.append('<li>' + e.target.value + '</li>');
+               }
+           });
+            
+
             
         });
     </script>
